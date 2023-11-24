@@ -1,0 +1,1 @@
+#include <stdio.h>#include <stdlib.h> //srand, rand를 사용하기 위한 헤더파일#include <time.h> // time을 사용하기 위한 헤더파일 int main() {	srand(time(NULL)); // 난수 초기화	for (int i = 0; i< 10; i++) // 10회 반복	{		int random = rand() % 5; // 0 ~ 4 사이의 숫자를 뽑아서 random 변수에 저장		printf("%d ", random); // 출력	}	return 0;}

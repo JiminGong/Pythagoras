@@ -1,1 +1,20 @@
 NewText
+import random
+
+# 로또 번호를 담을 리스트 초기화
+lotto_number = []
+
+for i in range(6):
+    random_val = random.randrange(1,46)
+
+    # num이 로또 번호에 이미 있으면 다시 random함수 호출한다.
+    # 없을때 까지 반복한다.
+    while random_val in lotto_number:
+        random_val = random.randrange(1,46)
+
+    lotto_number.append(random_val )
+
+    # 오름 차순으로 정렬
+    lotto_number.sort()
+
+print(lotto_number)
