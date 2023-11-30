@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() 
+{
+    int x, y, z, d;
+    for (x = 1; x <= 20; x++)
+    {
+        for (y = 1; y <= 20; y++)
+        {
+            // x,y값이 (3, 4), (4, 3)로 중복되는 것 방지
+            if (y < x) continue;            
+            for (z = 1; z <= 20; z++)
+            {
+                // x,z값이 (3, 4), (4, 3)로 중복되는 것 방지
+                if (z < x) continue;
+
+
+                if (z* z == x * x + y * y)
+                {
+                    printf("x=%2d, y=%2d, z=%2d\n", x, y, z);
+                }
+            }
+        }
+    }
+    return 0;
+}
